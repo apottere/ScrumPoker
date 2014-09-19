@@ -2,7 +2,7 @@
 
 $flip_speed: .4s;
 $card_height: 100px;
-$card_height_mobile: 50px; 
+$card_height_mobile: $card_height/2; 
 
 * {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
