@@ -1,0 +1,116 @@
+@import "compass/css3";
+
+$flip_speed: .4s;
+$card_height: 100px;
+$card_height_mobile: 50px; 
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+html {
+	background-color: #ecf0f1;
+	color: #2c3e50;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+div.number {
+	border: solid 5px #2c3e50;
+	@include border-radius(4px, 4px);
+	display: inline-block;
+
+	@include user-select(none);
+	cursor: pointer;
+
+	height: $card_height;
+	width: $card_height;
+	margin: 10px;
+
+	text-align: center;
+	font-size: 40px;
+
+	@media screen and (max-width: 700px) {
+		height: $card_height_mobile;
+		width: $card_height_mobile;
+
+		font-size: 20px;
+	}
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: $card_height;
+
+		@media screen and (max-width: 700px) {
+			line-height: $card_height_mobile;
+		}
+	}
+}
+
+div.number.fixed-center {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -($card_height / 2);
+	margin-top: -($card_height / 2);
+
+	@media screen and (max-width: 700px) {
+		height: ($card_height_mobile + 100);
+		width: ($card_height_mobile + 100);
+
+		margin-left: -(($card_height_mobile + 100) / 2);
+		margin-top: -(($card_height_mobile + 100) / 2);
+		margin-bottom: 0px;
+		margin-right: 0px;
+
+		font-size: 60px;
+	}
+
+	span {
+		@media screen and (max-width: 700px) {
+			line-height: ($card_height_mobile + 100);
+		}
+	}
+}
+
+div.container {
+	width: 390px;
+	margin: auto;
+
+	margin-top: 100px;
+
+	text-align: center;
+
+	@media screen and (max-width: 700px) {
+		margin-top: 50px;
+		width: 300px;
+	}
+
+	position: relative;
+}
+
+.flipper {
+	@include transition-duration($flip_speed);
+	@include transform-style(preserve-3d);
+	opacity: 1;
+}
+
+.flipper.ng-hide-add,
+.flipper.ng-hide-remove {
+	/* remember to add this */
+	display:block!important;
+}
+
+.flipper.ng-hide-remove {
+	@include transition-delay($flip_speed + .1s);
+}
+
+.flipper.ng-hide {
+	@include rotateY(90deg);
+	opacity: 0;
+}

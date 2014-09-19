@@ -1,0 +1,133 @@
+/* line 7, ../../scss/poker.scss */
+* {
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* line 14, ../../scss/poker.scss */
+html {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* line 22, ../../scss/poker.scss */
+div.number {
+  border: solid 5px #2c3e50;
+  -moz-border-radius: 4px / 4px;
+  -webkit-border-radius: 4px 4px;
+  border-radius: 4px / 4px;
+  display: inline-block;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+@media screen and (max-width: 700px) {
+  /* line 22, ../../scss/poker.scss */
+  div.number {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+  }
+}
+/* line 44, ../../scss/poker.scss */
+div.number span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 100px;
+}
+@media screen and (max-width: 700px) {
+  /* line 44, ../../scss/poker.scss */
+  div.number span {
+    line-height: 50px;
+  }
+}
+
+/* line 55, ../../scss/poker.scss */
+div.number.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+}
+@media screen and (max-width: 700px) {
+  /* line 55, ../../scss/poker.scss */
+  div.number.fixed-center {
+    height: 150px;
+    width: 150px;
+    margin-left: -75px;
+    margin-top: -75px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 74, ../../scss/poker.scss */
+  div.number.fixed-center span {
+    line-height: 150px;
+  }
+}
+
+/* line 81, ../../scss/poker.scss */
+div.container {
+  width: 390px;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 700px) {
+  /* line 81, ../../scss/poker.scss */
+  div.container {
+    margin-top: 50px;
+    width: 300px;
+  }
+}
+
+/* line 97, ../../scss/poker.scss */
+.flipper {
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  opacity: 1;
+}
+
+/* line 103, ../../scss/poker.scss */
+.flipper.ng-hide-add,
+.flipper.ng-hide-remove {
+  /* remember to add this */
+  display: block !important;
+}
+
+/* line 109, ../../scss/poker.scss */
+.flipper.ng-hide-remove {
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+/* line 113, ../../scss/poker.scss */
+.flipper.ng-hide {
+  -moz-transform: rotateY(90deg);
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  opacity: 0;
+}
