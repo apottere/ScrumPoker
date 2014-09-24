@@ -1,4 +1,7 @@
 angular.module("app", ['ngAnimate'])
+	.run(function() {
+		FastClick.attach(document.body);
+	});
 	.controller("PokerController", function($scope) {
 
 		$scope.numbers = [ 0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ];

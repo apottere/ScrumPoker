@@ -1,3 +1,6 @@
 [submodule "shake.js"]
-	path = shake.js
+	path = static/js/shake.js
 	url = https://github.com/alexgibson/shake.js.git
+[submodule "fastclick"]
+	path = static/js/fastclick
+	url = https://github.com/ftlabs/fastclick.git
