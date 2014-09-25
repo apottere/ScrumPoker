@@ -29,7 +29,7 @@ div.spacer {
 @media screen and (max-width: 700px) {
   /* line 31, ../../scss/poker.scss */
   div.spacer {
-    height: 10px;
+    height: 20px;
   }
 }
 
