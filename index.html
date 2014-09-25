@@ -15,13 +15,15 @@
 		<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Open+Sans' rel='stylesheet' type='text/css'>
 	</head>
 
-	<body>
-		<div data-ng-controller="PokerController" data-ng-init="onInit()" class="container">
+	<body data-ng-controller="PokerController" data-ng-init="onInit()">
+		<div class="background" data-ng-click="backgroundClick()"></div>
+		<div class="container">
 			<div data-ng-show="staged && !revealed" class="number fixed-center flipper" data-ng-click="revealClicked()"></div>
 
 			<div data-ng-show="!staged && revealed" class="number fixed-center flipper" data-ng-click="clearClicked()"><span data-ng-bind="selected"></span></div>
 
 			<div class="container">
+				<div class="spacer"></div> <!-- TODO: don't suck at css -->
 				<div data-ng-show="!staged && !revealed" id="numbers" class="clearfix flipper">
 					<div class="number" data-ng-click="clickNumber(number)" data-ng-repeat="number in numbers">
 						<span data-ng-bind="number"></span>

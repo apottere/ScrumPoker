@@ -28,5 +28,14 @@ angular.module("app", ['ngAnimate'])
 		$scope.clearClicked = function() {
 			$scope.revealed = false;
 		}
+
+		$scope.backgroundClick = function() {
+			if($scope.staged && !$scope.revealed) {
+				$scope.revealClicked();
+
+			} else if($scope.revealed && !$scope.staged) {
+				$scope.clearClicked();
+			}
+		}
 	}
 );
