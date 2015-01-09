@@ -7,7 +7,7 @@ $card_border: 5px;
 $card_height: 140px;
 $card_width: 100px;
 
-$card_height_mobile: 75px; 
+$card_height_mobile: 75px;
 $card_width_mobile: 50px;
 
 $number_size: 40px;
@@ -17,136 +17,136 @@ $fixed_ratio: 3;
 $mobile_fixed_ratio: 5;
 
 * {
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	margin: 0;
-	padding: 0;
-	outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    outline: 0;
 }
 
 html {
-	color: #2c3e50;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 600;
-	height: 100%;
+    color: #2c3e50;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    height: 100%;
 }
 
 body {
-	height: 100%;
-} 
+    height: 100%;
+}
 
 div.container {
-	background-color: #ecf0f1;
-	z-index: 2;
-	width: 100%;
+    background-color: #ecf0f1;
+    z-index: 2;
+    width: 100%;
 
-	text-align: center;
+    text-align: center;
 
-	position: relative;
-	min-height: 100%;
-	display: table;
-	table-layout: fixed;
+    position: relative;
+    min-height: 100%;
+    display: table;
+    table-layout: fixed;
 }
 
 div.v-center {
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
 }
 
 div.h-center {
-	margin: auto;
-	width: 390px;
+    margin: auto;
+    width: 390px;
 
-	@media screen and (max-width: 700px) {
-		width: 250px;
-	}
+    @media screen and (max-width: 700px) {
+        width: 250px;
+    }
 }
 
 div.number {
-	border: solid $card_border #2c3e50;
-	@include border-radius(4px, 4px);
-	display: inline-block;
-	box-sizing: border-box;
+    border: solid $card_border #2c3e50;
+    @include border-radius(4px, 4px);
+    display: inline-block;
+    box-sizing: border-box;
 
-	@include user-select(none);
-	cursor: pointer;
+    @include user-select(none);
+    cursor: pointer;
 
-	height: $card_height;
-	width: $card_width;
-	margin: 10px;
+    height: $card_height;
+    width: $card_width;
+    margin: 10px;
 
-	text-align: center;
-	font-size: $number_size;
+    text-align: center;
+    font-size: $number_size;
 
-	@media screen and (max-width: 700px) {
-		height: $card_height_mobile;
-		width: $card_width_mobile;
+    @media screen and (max-width: 700px) {
+        height: $card_height_mobile;
+        width: $card_width_mobile;
 
-		font-size: $number_size_mobile;
-	}
+        font-size: $number_size_mobile;
+    }
 
-	span {
-		display: inline-block;
-		vertical-align: middle;
-		line-height: $card_height - $card_border * 2;
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: $card_height - $card_border * 2;
 
-		@media screen and (max-width: 700px) {
-			line-height: $card_height_mobile - $card_border * 2;
-		}
-	}
+        @media screen and (max-width: 700px) {
+            line-height: $card_height_mobile - $card_border * 2;
+        }
+    }
 }
 
 div.number.fixed-center {
-	z-index: 3;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	font-weight: 800;
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-weight: 800;
 
-	height: $card_height * $fixed_ratio;
-	width: $card_width * $fixed_ratio;
-	margin-top: -(($card_height * $fixed_ratio) / 2);
-	margin-left: -(($card_width * $fixed_ratio) / 2);
+    height: $card_height * $fixed_ratio;
+    width: $card_width * $fixed_ratio;
+    margin-top: -(($card_height * $fixed_ratio) / 2);
+    margin-left: -(($card_width * $fixed_ratio) / 2);
 
-	font-size: $number_size * $fixed_ratio;
+    font-size: $number_size * $fixed_ratio;
 
-	@media screen and (max-width: 700px) {
-		height: ($card_height_mobile * $mobile_fixed_ratio);
-		width: ($card_width_mobile * $mobile_fixed_ratio);
+    @media screen and (max-width: 700px) {
+        height: ($card_height_mobile * $mobile_fixed_ratio);
+        width: ($card_width_mobile * $mobile_fixed_ratio);
 
-		margin-top: -(($card_height_mobile * $mobile_fixed_ratio) / 2);
-		margin-left: -(($card_width_mobile * $mobile_fixed_ratio) / 2);
-		margin-bottom: 0px;
-		margin-right: 0px;
+        margin-top: -(($card_height_mobile * $mobile_fixed_ratio) / 2);
+        margin-left: -(($card_width_mobile * $mobile_fixed_ratio) / 2);
+        margin-bottom: 0px;
+        margin-right: 0px;
 
-		font-size: $number_size_mobile * $mobile_fixed_ratio;
-	}
+        font-size: $number_size_mobile * $mobile_fixed_ratio;
+    }
 
-	span {
-		line-height: ($card_height * $fixed_ratio) - $card_border * 2;
+    span {
+        line-height: ($card_height * $fixed_ratio) - $card_border * 2;
 
-		@media screen and (max-width: 700px) {
-			line-height: ($card_height_mobile * $mobile_fixed_ratio) - $card_border * 2;
-		}
-	}
+        @media screen and (max-width: 700px) {
+            line-height: ($card_height_mobile * $mobile_fixed_ratio) - $card_border * 2;
+        }
+    }
 }
 
 .flipper {
-	@include transition-duration($flip_speed);
-	opacity: 1;
+    @include transition-duration($flip_speed);
+    opacity: 1;
 }
 
 .flipper.ng-hide-add,
 .flipper.ng-hide-remove {
-	/* remember to add this */
-	display:block!important;
+    /* remember to add this */
+    display: block !important;
 }
 
 .flipper.ng-hide-remove {
-	@include transition-delay($flip_speed + .1s);
+    @include transition-delay($flip_speed + .1s);
 }
 
 .flipper.ng-hide {
-	@include rotateY(90deg);
-	opacity: 0;
+    @include rotateY(90deg);
+    opacity: 0;
 }

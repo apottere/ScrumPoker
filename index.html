@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html data-ng-app="app">
-	<head>
-		<meta name="format-detection" content="telephone=no">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.js"></script>
-		<script src="static/js/fastclick/lib/fastclick.js"></script>
-		<script src="static/js/shake.js/shake.js"></script>
-		<script src="static/js/PokerController.js"></script>
-		<link rel="stylesheet" type="text/css" href="static/stylesheets/poker.css" />
-		<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Open+Sans' rel='stylesheet' type='text/css'>
-	</head>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="width=device-width"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.js"></script>
+        <script src="static/js/fastclick/lib/fastclick.js"></script>
+        <script src="static/js/shake.js/shake.js"></script>
+        <script src="static/js/PokerController.js"></script>
+        <link rel="stylesheet" type="text/css" href="static/stylesheets/poker.css"/>
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Open+Sans' rel='stylesheet' type='text/css'>
+    </head>
 
-	<body data-ng-controller="PokerController" data-ng-init="onInit()">
-		<div class="container" data-ng-click="backgroundClick()">
-			<div data-ng-show="staged && !revealed" class="number fixed-center flipper" data-ng-click="revealClicked(); noPropogate($event)"></div>
+    <body data-ng-controller="PokerController" data-ng-init="onInit()">
+        <div class="container" data-ng-click="backgroundClick()">
+            <div data-ng-show="staged && !revealed" class="number fixed-center flipper"
+                 data-ng-click="revealClicked(); noPropogate($event)"></div>
 
-			<div data-ng-show="!staged && revealed" class="number fixed-center flipper" data-ng-click="clearClicked(); noPropogate($event)"><span data-ng-bind="selected"></span></div>
+            <div data-ng-show="!staged && revealed" class="number fixed-center flipper"
+                 data-ng-click="clearClicked(); noPropogate($event)"><span data-ng-bind="selected"></span></div>
 
-			<div class="v-center">
-				<div class="h-center">
+            <div class="v-center">
+                <div class="h-center">
                     <div data-ng-show="!staged && !revealed" id="numbers" class="clearfix flipper">
-                        <div class="number" data-ng-click="clickNumber(number); noPropogate($event)" data-ng-repeat="number in numbers">
+                        <div class="number" data-ng-click="clickNumber(number); noPropogate($event)"
+                             data-ng-repeat="number in numbers">
                             <span data-ng-bind="number"></span>
                         </div>
                     </div>
-				</div>
-			</div>
-		</div>
-	</body>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
