@@ -16,18 +16,18 @@
 	</head>
 
 	<body data-ng-controller="PokerController" data-ng-init="onInit()">
-		<div class="background" data-ng-click="backgroundClick()"></div>
-		<div class="container">
-			<div data-ng-show="staged && !revealed" class="number fixed-center flipper" data-ng-click="revealClicked()"></div>
+		<div class="container" data-ng-click="backgroundClick()">
+			<div data-ng-show="staged && !revealed" class="number fixed-center flipper" data-ng-click="revealClicked(); noPropogate($event)"></div>
 
-			<div data-ng-show="!staged && revealed" class="number fixed-center flipper" data-ng-click="clearClicked()"><span data-ng-bind="selected"></span></div>
+			<div data-ng-show="!staged && revealed" class="number fixed-center flipper" data-ng-click="clearClicked(); noPropogate($event)"><span data-ng-bind="selected"></span></div>
 
-			<div class="container">
-				<div class="spacer"></div> <!-- TODO: don't suck at css -->
-				<div data-ng-show="!staged && !revealed" id="numbers" class="clearfix flipper">
-					<div class="number" data-ng-click="clickNumber(number)" data-ng-repeat="number in numbers">
-						<span data-ng-bind="number"></span>
-					</div>
+			<div class="v-center">
+				<div class="h-center">
+                    <div data-ng-show="!staged && !revealed" id="numbers" class="clearfix flipper">
+                        <div class="number" data-ng-click="clickNumber(number); noPropogate($event)" data-ng-repeat="number in numbers">
+                            <span data-ng-bind="number"></span>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>

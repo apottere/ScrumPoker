@@ -1,6 +1,12 @@
 angular.module("app", ['ngAnimate'])
 	.run(function() {
 		FastClick.attach(document.body);
+
+		//create a new instance of shake.js.
+		var myShakeEvent = new Shake({
+			threshold: 14 // optional shake strength threshold
+		});
+		myShakeEvent && myShakeEvent.start();
 	})
 	.controller("PokerController", function($scope) {
 
@@ -13,21 +19,21 @@ angular.module("app", ['ngAnimate'])
 			window.addEventListener('shake', function() {
 				$scope.$apply(function() { if($scope.staged && !$scope.revealed) { $scope.revealClicked(); } });
 			}, false);
-		}
+		};
 
 		$scope.clickNumber = function(number) {
 			$scope.staged = true;
 			$scope.selected = number;
-		}
+		};
 
 		$scope.revealClicked = function() {
 			$scope.staged = false;
 			$scope.revealed = true;
-		}
+		};
 
 		$scope.clearClicked = function() {
 			$scope.revealed = false;
-		}
+		};
 
 		$scope.backgroundClick = function() {
 			if($scope.staged && !$scope.revealed) {
@@ -36,6 +42,10 @@ angular.module("app", ['ngAnimate'])
 			} else if($scope.revealed && !$scope.staged) {
 				$scope.clearClicked();
 			}
+		};
+
+		$scope.noPropogate = function ($event) {
+			$event.stopPropagation();
 		}
 	}
 );
