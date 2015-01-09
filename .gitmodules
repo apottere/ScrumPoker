@@ -4,6 +4,3 @@
 [submodule "static/js/fastclick"]
 	path = static/js/fastclick
 	url = https://github.com/ftlabs/fastclick.git
-[submodule "static/stylesheets/fa"]
-	path = static/stylesheets/fa
-	url = https://github.com/FortAwesome/Font-Awesome.git
