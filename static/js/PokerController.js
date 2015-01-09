@@ -15,6 +15,9 @@ angular.module("app", ['ngAnimate'])
         $scope.revealed = false;
         $scope.selected = null;
 
+        $scope.hasStandalone = ("standalone" in window.navigator) && typeof window.navigator.standalone === 'boolean';
+        $scope.standalone = $scope.hasStandalone && window.navigator.standalone === true;
+
         $scope.onInit = function() {
             window.addEventListener('shake', function() {
                 $scope.$apply(function() {
@@ -50,6 +53,6 @@ angular.module("app", ['ngAnimate'])
 
         $scope.noPropogate = function($event) {
             $event.stopPropagation();
-        }
+        };
     }
 );

@@ -157,3 +157,29 @@ div.number.fixed-center span {
   transform: rotateY(90deg);
   opacity: 0;
 }
+
+/* line 154, ../../scss/poker.scss */
+#notification {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #F4D03F;
+  text-align: center;
+  padding: 5px 0;
+}
+/* line 166, ../../scss/poker.scss */
+#notification i {
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+/* line 172, ../../scss/poker.scss */
+#notification a {
+  color: #C52323;
+  text-decoration: none !important;
+}
+/* line 176, ../../scss/poker.scss */
+#notification a:visited {
+  color: #C52323;
+}

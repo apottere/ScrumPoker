@@ -150,3 +150,31 @@ div.number.fixed-center {
     @include rotateY(90deg);
     opacity: 0;
 }
+
+#notification {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+    background-color: #F4D03F;
+    text-align: center;
+
+    padding: 5px 0;
+
+    i {
+        vertical-align: text-bottom;
+        margin-right: 5px;
+    }
+
+    $link-color: #C52323;
+    a {
+        color: $link-color;
+        text-decoration: none !important;
+
+        &:visited {
+            color: $link-color;
+        }
+    }
+}
