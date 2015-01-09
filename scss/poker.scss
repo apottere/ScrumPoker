@@ -4,14 +4,17 @@ $flip_speed: .4s;
 
 $card_border: 5px;
 
-$card_height: 125px;
+$card_height: 140px;
 $card_width: 100px;
 
 $card_height_mobile: 75px; 
 $card_width_mobile: 50px;
 
+$number_size: 40px;
+$number_size_mobile: 22px;
+
 $fixed_ratio: 3;
-$mobile_fixed_ratio: 4;
+$mobile_fixed_ratio: 5;
 
 * {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -23,7 +26,6 @@ $mobile_fixed_ratio: 4;
 html {
 	color: #2c3e50;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 14px;
 	font-weight: 600;
 	height: 100%;
 }
@@ -74,13 +76,13 @@ div.number {
 	margin: 10px;
 
 	text-align: center;
-	font-size: 40px;
+	font-size: $number_size;
 
 	@media screen and (max-width: 700px) {
 		height: $card_height_mobile;
 		width: $card_width_mobile;
 
-		font-size: 22px;
+		font-size: $number_size_mobile;
 	}
 
 	span {
@@ -106,7 +108,7 @@ div.number.fixed-center {
 	margin-top: -(($card_height * $fixed_ratio) / 2);
 	margin-left: -(($card_width * $fixed_ratio) / 2);
 
-	font-size: 100px;
+	font-size: $number_size * $fixed_ratio;
 
 	@media screen and (max-width: 700px) {
 		height: ($card_height_mobile * $mobile_fixed_ratio);
@@ -117,7 +119,7 @@ div.number.fixed-center {
 		margin-bottom: 0px;
 		margin-right: 0px;
 
-		font-size: 90px;
+		font-size: $number_size_mobile * $mobile_fixed_ratio;
 	}
 
 	span {

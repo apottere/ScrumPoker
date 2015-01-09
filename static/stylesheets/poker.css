@@ -1,4 +1,4 @@
-/* line 16, ../../scss/poker.scss */
+/* line 19, ../../scss/poker.scss */
 * {
   -webkit-tap-highlight-color: transparent;
   margin: 0;
@@ -6,21 +6,20 @@
   outline: 0;
 }
 
-/* line 23, ../../scss/poker.scss */
+/* line 26, ../../scss/poker.scss */
 html {
   color: #2c3e50;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
   font-weight: 600;
   height: 100%;
 }
 
-/* line 31, ../../scss/poker.scss */
+/* line 33, ../../scss/poker.scss */
 body {
   height: 100%;
 }
 
-/* line 35, ../../scss/poker.scss */
+/* line 37, ../../scss/poker.scss */
 div.container {
   background-color: #ecf0f1;
   z-index: 2;
@@ -32,26 +31,26 @@ div.container {
   table-layout: fixed;
 }
 
-/* line 48, ../../scss/poker.scss */
+/* line 50, ../../scss/poker.scss */
 div.v-center {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
 }
 
-/* line 54, ../../scss/poker.scss */
+/* line 56, ../../scss/poker.scss */
 div.h-center {
   margin: auto;
   width: 390px;
 }
 @media screen and (max-width: 700px) {
-  /* line 54, ../../scss/poker.scss */
+  /* line 56, ../../scss/poker.scss */
   div.h-center {
     width: 250px;
   }
 }
 
-/* line 63, ../../scss/poker.scss */
+/* line 65, ../../scss/poker.scss */
 div.number {
   border: solid 5px #2c3e50;
   -moz-border-radius: 4px / 4px;
@@ -64,70 +63,70 @@ div.number {
   -webkit-user-select: none;
   user-select: none;
   cursor: pointer;
-  height: 125px;
+  height: 140px;
   width: 100px;
   margin: 10px;
   text-align: center;
   font-size: 40px;
 }
 @media screen and (max-width: 700px) {
-  /* line 63, ../../scss/poker.scss */
+  /* line 65, ../../scss/poker.scss */
   div.number {
     height: 75px;
     width: 50px;
     font-size: 22px;
   }
 }
-/* line 86, ../../scss/poker.scss */
+/* line 88, ../../scss/poker.scss */
 div.number span {
   display: inline-block;
   vertical-align: middle;
-  line-height: 115px;
+  line-height: 130px;
 }
 @media screen and (max-width: 700px) {
-  /* line 86, ../../scss/poker.scss */
+  /* line 88, ../../scss/poker.scss */
   div.number span {
     line-height: 65px;
   }
 }
 
-/* line 97, ../../scss/poker.scss */
+/* line 99, ../../scss/poker.scss */
 div.number.fixed-center {
   z-index: 3;
   position: fixed;
   top: 50%;
   left: 50%;
   font-weight: 800;
-  height: 375px;
+  height: 420px;
   width: 300px;
-  margin-top: -187.5px;
+  margin-top: -210px;
   margin-left: -150px;
-  font-size: 100px;
+  font-size: 120px;
 }
 @media screen and (max-width: 700px) {
-  /* line 97, ../../scss/poker.scss */
+  /* line 99, ../../scss/poker.scss */
   div.number.fixed-center {
-    height: 300px;
-    width: 200px;
-    margin-top: -150px;
-    margin-left: -100px;
+    height: 375px;
+    width: 250px;
+    margin-top: -187.5px;
+    margin-left: -125px;
     margin-bottom: 0px;
     margin-right: 0px;
-    font-size: 90px;
+    font-size: 110px;
   }
 }
-/* line 123, ../../scss/poker.scss */
+/* line 125, ../../scss/poker.scss */
 div.number.fixed-center span {
-  line-height: 365px;
+  line-height: 410px;
 }
 @media screen and (max-width: 700px) {
-  /* line 123, ../../scss/poker.scss */
+  /* line 125, ../../scss/poker.scss */
   div.number.fixed-center span {
-    line-height: 290px;
+    line-height: 365px;
   }
 }
 
-/* line 132, ../../scss/poker.scss */
+/* line 134, ../../scss/poker.scss */
 .flipper {
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
@@ -136,14 +135,14 @@ div.number.fixed-center span {
   opacity: 1;
 }
 
-/* line 137, ../../scss/poker.scss */
+/* line 139, ../../scss/poker.scss */
 .flipper.ng-hide-add,
 .flipper.ng-hide-remove {
   /* remember to add this */
   display: block !important;
 }
 
-/* line 143, ../../scss/poker.scss */
+/* line 145, ../../scss/poker.scss */
 .flipper.ng-hide-remove {
   -moz-transition-delay: 0.5s;
   -o-transition-delay: 0.5s;
@@ -151,7 +150,7 @@ div.number.fixed-center span {
   transition-delay: 0.5s;
 }
 
-/* line 147, ../../scss/poker.scss */
+/* line 149, ../../scss/poker.scss */
 .flipper.ng-hide {
   -moz-transform: rotateY(90deg);
   -webkit-transform: rotateY(90deg);
