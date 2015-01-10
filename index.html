@@ -41,19 +41,17 @@
     </head>
 
     <body data-ng-controller="PokerController" data-ng-init="onInit()">
-        <div id="notification" data-ng-show="hasStandalone && !standalone" data-ng-click="noPropogate($event)">
+        <div id="notification" data-ng-show="hasStandalone && !standalone" data-ng-click="noPropogate($event)" class="ng-hide">
              <a href="http://www.howtogeek.com/196087/how-to-add-websites-to-the-home-screen-on-any-smartphone-or-tablet/" target="_blank"><i class="fa fa-external-link"></i> Try adding me to your homescreen!</a>
         </div>
         <div class="container" data-ng-click="backgroundClick()">
-            <div data-ng-show="staged && !revealed" class="number fixed-center flipper"
-                 data-ng-click="revealClicked(); noPropogate($event)"></div>
+            <div data-ng-show="staged && !revealed" class="number fixed-center flipper ng-hide" data-ng-click="revealClicked(); noPropogate($event)"></div>
 
-            <div data-ng-show="!staged && revealed" class="number fixed-center flipper"
-                 data-ng-click="clearClicked(); noPropogate($event)"><span data-ng-bind="selected"></span></div>
+            <div data-ng-show="!staged && revealed" class="number fixed-center flipper ng-hide" data-ng-click="clearClicked(); noPropogate($event)"><span data-ng-bind="selected"></span></div>
 
             <div class="v-center">
                 <div class="h-center">
-                    <div data-ng-show="!staged && !revealed" id="numbers" class="clearfix flipper">
+                    <div data-ng-show="!staged && !revealed" id="numbers" class="clearfix flipper ng-hide">
                         <div class="number" data-ng-click="clickNumber(number); noPropogate($event)" data-ng-repeat="number in numbers">
                             <span data-ng-bind="number"></span>
                         </div>

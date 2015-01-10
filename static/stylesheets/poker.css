@@ -110,8 +110,8 @@ div.number.fixed-center {
     width: 250px;
     margin-top: -187.5px;
     margin-left: -125px;
-    margin-bottom: 0px;
-    margin-right: 0px;
+    margin-bottom: 0;
+    margin-right: 0;
     font-size: 110px;
   }
 }
@@ -182,4 +182,9 @@ div.number.fixed-center span {
 /* line 176, ../../scss/poker.scss */
 #notification a:visited {
   color: #C52323;
+}
+
+/* line 182, ../../scss/poker.scss */
+.ng-hide {
+  display: none;
 }

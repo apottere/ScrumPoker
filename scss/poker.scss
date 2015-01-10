@@ -116,8 +116,8 @@ div.number.fixed-center {
 
         margin-top: -(($card_height_mobile * $mobile_fixed_ratio) / 2);
         margin-left: -(($card_width_mobile * $mobile_fixed_ratio) / 2);
-        margin-bottom: 0px;
-        margin-right: 0px;
+        margin-bottom: 0;
+        margin-right: 0;
 
         font-size: $number_size_mobile * $mobile_fixed_ratio;
     }
@@ -177,4 +177,8 @@ div.number.fixed-center {
             color: $link-color;
         }
     }
+}
+
+.ng-hide {
+    display: none;
 }

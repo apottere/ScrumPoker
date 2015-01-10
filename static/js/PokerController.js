@@ -4,7 +4,7 @@ angular.module("app", ['ngAnimate'])
 
         //create a new instance of shake.js.
         var myShakeEvent = new Shake({
-            threshold: 14 // optional shake strength threshold
+            threshold: 10 // optional shake strength threshold
         });
         myShakeEvent && myShakeEvent.start();
     })
@@ -15,14 +15,19 @@ angular.module("app", ['ngAnimate'])
         $scope.revealed = false;
         $scope.selected = null;
 
-        $scope.hasStandalone = ("standalone" in window.navigator) && typeof window.navigator.standalone === 'boolean';
-        $scope.standalone = $scope.hasStandalone && window.navigator.standalone === true;
+        $scope.hasStandalone = typeof navigator.standalone === 'boolean';
+        $scope.standalone = navigator.standalone === true;
+
+        $scope.hasVibrate = 'vibrate' in navigator;
 
         $scope.onInit = function() {
             window.addEventListener('shake', function() {
                 $scope.$apply(function() {
                     if($scope.staged && !$scope.revealed) {
                         $scope.revealClicked();
+                        if($scope.hasVibrate) {
+                            navigator.vibrate(100);
+                        }
                     }
                 });
             }, false);
