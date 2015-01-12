@@ -10,7 +10,13 @@ angular.module("app", ['ngAnimate'])
     })
     .controller("PokerController", function($scope) {
 
-        $scope.numbers = [0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+        $scope.numberSets = {
+            'fib': ['?', 0, 1, 2, 3, 5, 8, 13, 21, 34, 55, '∞'],
+            'tee': [' ? ', 'XS', 'S', 'M', 'L', 'XL']
+        };
+
+        $scope.numbers = $scope.numberSets['fib'];
+//        $scope.numbers = $scope.numberSets['tee'];
         $scope.staged = false;
         $scope.revealed = false;
         $scope.selected = null;
@@ -58,6 +64,10 @@ angular.module("app", ['ngAnimate'])
 
         $scope.noPropogate = function($event) {
             $event.stopPropagation();
+        };
+
+        $scope.changeNumbers = function(s) {
+            $scope.numbers = $scope.numberSets[s];
         };
     }
 );

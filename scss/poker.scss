@@ -1,5 +1,8 @@
 @import "compass/css3";
 
+$blue: #2c3e50;
+$green: #03A678;
+
 $flip_speed: .4s;
 
 $card_border: 5px;
@@ -25,7 +28,7 @@ $mobile_fixed_ratio: 5;
 }
 
 html {
-    color: #2c3e50;
+    color: $blue;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     height: 100%;
@@ -64,7 +67,7 @@ div.h-center {
 }
 
 div.number {
-    border: solid #2c3e50;
+    border: solid $blue;
     border-width: $card_border;
 
     @include border-radius(4px, 4px);
@@ -97,6 +100,18 @@ div.number {
         @media screen and (max-width: 700px) {
             line-height: $card_height_mobile - $card_border_mobile * 2;
         }
+    }
+
+    &.ng-enter {
+        @include transition(0.5s);
+
+        @include translate3d(-100px, 0);
+        opacity: 0;
+    }
+
+    &.ng-enter-active {
+        @include translate3d(0, 0);
+        opacity: 1;
     }
 }
 
@@ -179,6 +194,46 @@ div.number.fixed-center {
 
         &:visited {
             color: $link-color;
+        }
+    }
+}
+
+ul.switcher {
+    list-style: none;
+    text-align: center;
+    display: block;
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+
+    li {
+        display: inline-block;
+
+        margin-right: 10px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        a {
+            color: $blue;
+            border: 3px solid $blue;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            display: inline-block;
+
+            cursor: pointer;
+
+            @include user-select(none);
+
+            @include transition(.2s);
+        }
+
+        a.selected {
+            color: $green;
+            border-color: $green;
         }
     }
 }
