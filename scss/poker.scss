@@ -3,6 +3,7 @@
 $flip_speed: .4s;
 
 $card_border: 5px;
+$card_border_mobile: 3px;
 
 $card_height: 140px;
 $card_width: 100px;
@@ -63,7 +64,9 @@ div.h-center {
 }
 
 div.number {
-    border: solid $card_border #2c3e50;
+    border: solid #2c3e50;
+    border-width: $card_border;
+
     @include border-radius(4px, 4px);
     display: inline-block;
     box-sizing: border-box;
@@ -79,6 +82,7 @@ div.number {
     font-size: $number_size;
 
     @media screen and (max-width: 700px) {
+        border-width: $card_border_mobile;
         height: $card_height_mobile;
         width: $card_width_mobile;
 
@@ -91,7 +95,7 @@ div.number {
         line-height: $card_height - $card_border * 2;
 
         @media screen and (max-width: 700px) {
-            line-height: $card_height_mobile - $card_border * 2;
+            line-height: $card_height_mobile - $card_border_mobile * 2;
         }
     }
 }
@@ -101,7 +105,7 @@ div.number.fixed-center {
     position: fixed;
     top: 50%;
     left: 50%;
-    font-weight: 800;
+    font-weight: 700;
 
     height: $card_height * $fixed_ratio;
     width: $card_width * $fixed_ratio;
@@ -126,7 +130,7 @@ div.number.fixed-center {
         line-height: ($card_height * $fixed_ratio) - $card_border * 2;
 
         @media screen and (max-width: 700px) {
-            line-height: ($card_height_mobile * $mobile_fixed_ratio) - $card_border * 2;
+            line-height: ($card_height_mobile * $mobile_fixed_ratio) - $card_border_mobile * 2;
         }
     }
 }
