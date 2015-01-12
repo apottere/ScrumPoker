@@ -16,7 +16,6 @@ angular.module("app", ['ngAnimate'])
         };
 
         $scope.numbers = $scope.numberSets['fib'];
-//        $scope.numbers = $scope.numberSets['tee'];
         $scope.staged = false;
         $scope.revealed = false;
         $scope.selected = null;
