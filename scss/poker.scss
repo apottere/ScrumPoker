@@ -103,7 +103,7 @@ div.number {
     }
 
     &.ng-enter {
-        @include transition(0.5s);
+        @include transition(0.5s ease-out);
 
         @include translate3d(-100px, 0);
         opacity: 0;

@@ -93,10 +93,10 @@ div.number span {
 }
 /* line 105, ../../scss/poker.scss */
 div.number.ng-enter {
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -moz-transition: ease-out 0.5s;
+  -o-transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
   -moz-transform: translate3d(-100px, 0, 1em);
   -webkit-transform: translate3d(-100px, 0, 1em);
   transform: translate3d(-100px, 0, 1em);

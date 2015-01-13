@@ -11,7 +11,7 @@ angular.module("app", ['ngAnimate'])
     .controller("PokerController", function($scope) {
 
         $scope.numberSets = {
-            'fib': ['?', 0, 1, 2, 3, 5, 8, 13, 21, 34, 55, '∞'],
+            'fib': ['?', 0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89],
             'tee': [' ? ', 'XS', 'S', 'M', 'L', 'XL']
         };
 
