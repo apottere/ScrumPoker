@@ -11,10 +11,22 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
-    font-style: normal;
-}.flaticon-external:before {
+	font-style: normal;
+}.flaticon-infinite3:before {
 	content: "\e000";
 }
-.flaticon-tshirt:before {
+.flaticon-external:before {
 	content: "\e001";
+}
+.flaticon-spiral13:before {
+	content: "\e002";
+}
+.flaticon-thumbs23:before {
+	content: "\e003";
+}
+.flaticon-thumbs24:before {
+	content: "\e004";
+}
+.flaticon-tshirt:before {
+	content: "\e005";
 }

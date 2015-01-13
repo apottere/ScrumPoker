@@ -3,7 +3,7 @@
 $blue: #2c3e50;
 $green: #03A678;
 
-$flip_speed: .4s;
+$flip_speed: .3s;
 
 $card_border: 5px;
 $card_border_mobile: 3px;
@@ -92,7 +92,7 @@ div.number {
         font-size: $number_size_mobile;
     }
 
-    span {
+    span, i {
         display: inline-block;
         vertical-align: middle;
         line-height: $card_height - $card_border * 2;
@@ -141,7 +141,7 @@ div.number.fixed-center {
         font-size: $number_size_mobile * $mobile_fixed_ratio;
     }
 
-    span {
+    span, i {
         line-height: ($card_height * $fixed_ratio) - $card_border * 2;
 
         @media screen and (max-width: 700px) {
@@ -157,7 +157,6 @@ div.number.fixed-center {
 
 .flipper.ng-hide-add,
 .flipper.ng-hide-remove {
-    /* remember to add this */
     display: block !important;
 }
 
@@ -198,12 +197,16 @@ div.number.fixed-center {
     }
 }
 
+$button-size: 30px;
+$button-border: 3px;
+$button-bottom: 10px;
+$button-slide-hide: $button-size + $button-border * 2 + $button-bottom + 10px;
 ul.switcher {
     list-style: none;
     text-align: center;
     display: block;
     position: fixed;
-    bottom: 5px;
+    bottom: $button-bottom;
     left: 0;
     width: 100%;
 
@@ -218,10 +221,10 @@ ul.switcher {
 
         a {
             color: $blue;
-            border: 3px solid $blue;
-            height: 30px;
-            width: 30px;
-            line-height: 30px;
+            border: $button-border solid $blue;
+            height: $button-size;
+            width: $button-size;
+            line-height: $button-size;
             display: inline-block;
 
             cursor: pointer;
@@ -236,6 +239,30 @@ ul.switcher {
             border-color: $green;
         }
     }
+
+
+    &.ng-hide-add,
+    &.ng-hide-remove {
+        display: block !important;
+    }
+
+    &.ng-hide-add {
+        @include transition(0.35s ease-in);
+    }
+
+    &.ng-hide-add.ng-hide-add-active {
+        @include translate3d(0, $button-slide-hide, 0);
+    }
+
+    &.ng-hide-remove {
+        @include transition(0.4s ease-out);
+        @include translate3d(0, $button-slide-hide, 0);
+    }
+
+    &.ng-hide-remove-active {
+        @include translate3d(0, 0, 0);
+    }
+
 }
 
 .ng-hide {

@@ -11,8 +11,9 @@ angular.module("app", ['ngAnimate'])
     .controller("PokerController", function($scope) {
 
         $scope.numberSets = {
-            'fib': ['?', 0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89],
-            'tee': [' ? ', 'XS', 'S', 'M', 'L', 'XL']
+            'fib': [0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 'flaticon-infinite3', '?'],
+            'tee': ['XS', 'S', 'M', 'L', 'XL', ' ? '],
+            'thumbs': ['flaticon-thumbs23', 'flaticon-thumbs24', '   ?   ']
         };
 
         $scope.numbers = $scope.numberSets['fib'];
@@ -65,8 +66,9 @@ angular.module("app", ['ngAnimate'])
             $event.stopPropagation();
         };
 
-        $scope.changeNumbers = function(s) {
+        $scope.changeNumbers = function(s, icon) {
             $scope.numbers = $scope.numberSets[s];
+            $scope.icon = icon || false;
         };
     }
 );
